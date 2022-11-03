@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Read the English book",
+      "priority": "high",
+      "description": "Finish reading the last chapter of book 2",
+      "isCompleted": false
+    },
+    {
+      "id": 2,
+      "title": "Writing chemistry paper",
+      "priority": "low",
+      "description": "Finish the article about chemical bonding",
+      "isCompleted": true
+    },
+    {
+      "id": 3,
+      "title": "Solving typescript questions",
+      "priority": "normal",
+      "description": "Add typescript notions to the questions",
+      "isCompleted": true
+    }
+  ]
+}
