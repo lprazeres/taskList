@@ -53,7 +53,6 @@ export function TasksProvider({ children }: TasksProviderProps) {
         e.preventDefault()
 
         const task = {
-            id: uuidv4(),
             title: title,
             priority: priority,
             description: description,
@@ -66,12 +65,15 @@ export function TasksProvider({ children }: TasksProviderProps) {
 
     async function postNewTask(task){
 
-        alert(`${task.title}, ${task.description}, ${task.priority}, ${task.id}`);
-        /*
-        await fetch('http://localhost:3336/tasks').post('tasks',{
-            task,
-        })
-        */
+        const response = await fetch('http://localhost:3336/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+              },
+            body: JSON.stringify(task)
+          });
+        
+          setTasks([...tasks, task])
     }
 
 
